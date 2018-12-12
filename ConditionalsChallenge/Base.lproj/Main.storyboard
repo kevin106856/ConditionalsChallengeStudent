@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pFi-ub-Kyt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConditionalsChallengeStudent" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="4" translatesAutoresizingMaskIntoConstraints="NO" id="3Xl-tk-LKW">
+                                <rect key="frame" x="16" y="478" width="568" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="HIc-PF-NIe"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="MVP"/>
+                                    <segment title="Stretch1"/>
+                                    <segment title="Stretch2"/>
+                                    <segment title="Stretch3"/>
+                                    <segment title="Stretch4"/>
+                                    <segment title="Stretch5"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxr-XI-ADC">
+                                <rect key="frame" x="0.0" y="514" width="600" height="86"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WyD-OI-81w">
+                                <rect key="frame" x="0.0" y="64" width="600" height="89"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="5t4-QH-RQa"/>
+                                </constraints>
+                                <string key="text">Use the lines on the right to move the items into the order that you would like, select which challenge you would like to test and then click the refresh button in the top right of the screen.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qYQ-r3-qw8">
+                                <rect key="frame" x="-38" y="161" width="638" height="316"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="316" id="dle-PC-1Im"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="jc4-Mw-zxI">
+                                        <rect key="frame" x="0.0" y="22" width="638" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jc4-Mw-zxI" id="hwS-Ea-MHc">
+                                            <rect key="frame" x="0.0" y="0.0" width="638" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pKh-Z3-dry"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="McM-rZ-rLP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wxr-XI-ADC" firstAttribute="top" secondItem="3Xl-tk-LKW" secondAttribute="bottom" constant="8" id="ECv-mV-Ray"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wxr-XI-ADC" secondAttribute="bottom" id="KKd-PB-8QD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WyD-OI-81w" secondAttribute="trailing" constant="-20" id="O7y-AY-aMp"/>
+                            <constraint firstItem="3Xl-tk-LKW" firstAttribute="top" secondItem="qYQ-r3-qw8" secondAttribute="bottom" constant="1" id="UAP-o2-u9z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wxr-XI-ADC" secondAttribute="trailing" constant="-20" id="Vch-e6-fkW"/>
+                            <constraint firstItem="qYQ-r3-qw8" firstAttribute="top" secondItem="WyD-OI-81w" secondAttribute="bottom" constant="8" id="cli-4e-SXH"/>
+                            <constraint firstItem="3Xl-tk-LKW" firstAttribute="top" secondItem="qYQ-r3-qw8" secondAttribute="bottom" constant="1" id="dUY-wP-oW7"/>
+                            <constraint firstItem="3Xl-tk-LKW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="gEq-wl-2NF"/>
+                            <constraint firstItem="WyD-OI-81w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="iAa-tk-282"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qYQ-r3-qw8" secondAttribute="trailing" constant="-20" id="sI7-Qd-exY"/>
+                            <constraint firstItem="WyD-OI-81w" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tUs-xY-f77"/>
+                            <constraint firstItem="Wxr-XI-ADC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="v7i-RF-Qk4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Xl-tk-LKW" secondAttribute="trailing" constant="-4" id="vPc-30-j2V"/>
+                            <constraint firstItem="qYQ-r3-qw8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-58" id="yoj-mz-ys7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bEs-W6-FcP">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ye6-mC-IkD">
+                            <connections>
+                                <action selector="whenRefreshPressed:" destination="BYZ-38-t0r" id="m4k-BH-NuF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mySegmentedControl" destination="3Xl-tk-LKW" id="Vs1-Jt-zlQ"/>
+                        <outlet property="myTableView" destination="qYQ-r3-qw8" id="v7j-YL-EtK"/>
+                        <outlet property="myTextView" destination="Wxr-XI-ADC" id="3Ex-WS-3vQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888" y="-403"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gce-gh-CYA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pFi-ub-Kyt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cSp-sB-w39">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ky5-Qx-9L8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gtz-0n-K1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="-403"/>
+        </scene>
+    </scenes>
+</document>
